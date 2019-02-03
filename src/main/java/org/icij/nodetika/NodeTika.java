@@ -208,6 +208,7 @@ public class NodeTika {
 		final Object sortByPosition = options.get("pdfSortByPosition");
 		final Object spacingTolerance = options.get("pdfSpacingTolerance");
 		final Object suppressDuplicateOverlappingText = options.get("pdfSuppressDuplicateOverlappingText");
+		final Object ocrStrategy = options.get("ocrStrategy");
 
 		if (averageCharTolerance != null) {
 			pdfParserConfig.setAverageCharTolerance(Float.parseFloat(averageCharTolerance.toString()));
@@ -245,6 +246,10 @@ public class NodeTika {
 
 		if (suppressDuplicateOverlappingText != null) {
 			pdfParserConfig.setSuppressDuplicateOverlappingText((Boolean) suppressDuplicateOverlappingText);
+		}
+
+		if (ocrStrategy != null) {
+			pdfParserConfig.setOcrStrategy(ocrStrategy.toString());
 		}
 	}
 
