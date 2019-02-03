@@ -65,6 +65,8 @@ The available options are the following.
  - `ocrPageSegmentationMode` to set the Tesseract page segmentation mode.
  - `ocrTimeout` to set the maximum time in seconds to wait for the Tesseract process to terminate.
  - `ocrStrategy` to set an OCR strategy — especially useful if you want to extract text in images in PDF (use `ocr_only` in that case).
+ - `ocrOutputType` to set the OCR output type (either `txt` or `hocr`).
+
 
 ### PDF parser options ###
 

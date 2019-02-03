@@ -271,6 +271,7 @@ public class NodeTika {
 		final Object ocrMinFileSize = options.get("ocrMinFileSize");
 		final Object ocrPageSegmentationMode = options.get("ocrPageSegmentationMode");
 		final Object ocrTimeout = options.get("ocrTimeout");
+		final Object ocrOutputType = options.get("ocrOutputType");
 
 		if (ocrPath != null) {
 			ocrConfig.setTesseractPath(ocrPath.toString());
@@ -290,6 +291,10 @@ public class NodeTika {
 
 		if (ocrTimeout != null) {
 			ocrConfig.setTimeout(Integer.parseInt(ocrTimeout.toString()));
+		}
+
+		if (ocrOutputType != null) {
+			ocrConfig.setOutputType(ocrOutputType.toString());
 		}
 	}
 
